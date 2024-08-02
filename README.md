@@ -1,8 +1,26 @@
-# React + Vite
+# Lyrics Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that allows users to find the lyrics of their favorite songs by entering the artist's name and the song title. The app uses the [Lyrics.ovh API](https://lyricsovh.docs.apiary.io/#) to fetch lyrics.
 
-Currently, two official plugins are available:
+![Logo](src/assets/Lyrics%20Finder%20Header.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
+
+- **Search Lyrics:** Users can input the name of the artist and the song to search for lyrics.
+- **Display Lyrics:** The app displays the fetched lyrics in a user-friendly format.
+- **Navigation:** The app uses React Router for navigation between the home page and the lyrics display page.
+
+# Future Improvements
+
+- Add error handling for API requests.
+- Add loading indicators while fetching lyrics.
+- Improve UI/UX design.
+- Add responsive design.
+
+## Screenshots
+
+![App Screenshot](src/assets/screenshot.png)
+
+## Authors
+
+- Developed and designed by: [@mdurando](https://twitter.com/ingeaeri)
