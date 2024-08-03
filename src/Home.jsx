@@ -1,7 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home({ searchLyrics, setArtist, setSong }) {
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        searchLyrics().then((lyricsFound) => {
+            if (lyricsFound) {
+                navigate('/lyrics');
+            } else {
+                navigate('/error');
+            }
+        });
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    };
+
     return (
         <div className="flex justify-center items-center">
             <div className="mobile flex flex-col justify-center items-center overflow-y-auto overflow-x-hidden">
@@ -16,6 +34,7 @@ function Home({ searchLyrics, setArtist, setSong }) {
                         onChange={(e) => {
                             setSong(e.target.value);
                         }}
+                        onKeyDown={handleKeyDown}
                     />
                 </div>
                 <div className="w-full">
@@ -28,19 +47,15 @@ function Home({ searchLyrics, setArtist, setSong }) {
                                 onChange={(e) => {
                                     setArtist(e.target.value);
                                 }}
-                                onKeyDown={(e) => {
-                                    if (e.key == "Enter") {
-                                        searchLyrics();
-                                    }
-                                }}
+                                onKeyDown={handleKeyDown}
                             />
                         </div>
-                        <Link to={'/lyrics'}
+                        <button
                             className="bg-main flex p-4 px-3 w-4/5 justify-center items-center rounded-full"
-                            onClick={searchLyrics}
+                            onClick={handleSearch}
                         >
                             <p className="text-bg font-bold">Find Lyrics</p>
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -48,5 +63,4 @@ function Home({ searchLyrics, setArtist, setSong }) {
     );
 }
 
-
-export default Home
+export default Home;

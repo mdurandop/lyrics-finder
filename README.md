@@ -12,14 +12,15 @@ This is a simple React application that allows users to find the lyrics of their
 
 # Future Improvements
 
-- Add error handling for API requests.
+- Add error handling for API requests. ✅
 - Add loading indicators while fetching lyrics.
 - Improve UI/UX design.
-- Add responsive design.
+- Add responsive design. ✅
 
 ## Screenshots
 
 ![App Screenshot](src/assets/screenshot.png)
+![Error Screenshot](src/assets/error-screenshot.png)
 
 ## Authors
 
