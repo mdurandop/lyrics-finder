@@ -20,6 +20,7 @@ This is a simple React application that allows users to find the lyrics of their
 ## Screenshots
 
 ![App Screenshot](src/assets/screenshot.png)
+![Lyrics Screenshot](src/assets/lyrics-screenshot.png)
 ![Error Screenshot](src/assets/error-screenshot.png)
 
 ## Authors
